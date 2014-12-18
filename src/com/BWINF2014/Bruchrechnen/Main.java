@@ -1,7 +1,6 @@
 package com.BWINF2014.Bruchrechnen;
 
 import java.util.Scanner;
-import java.lang.Math;
 import com.BWINF2014.Bruchrechnen.util.*;
 
 public class Main {
@@ -11,8 +10,6 @@ public class Main {
         int b;
         int p;//p div q
         int q;
-
-        @SuppressWarnings("UnusedDeclaration")
         String[] Aufgaben = new String[256];
         String[] Loesungen = new String[256];
 
@@ -25,7 +22,8 @@ public class Main {
             case 1: {
                 boolean found;
                 System.out.println("Bitte Anzahl der Aufgaben eingeben");
-                for (int i = 1; i == s.nextInt(); i++) {
+                int AufgCount = s.nextInt();
+                for (int i = 1; i == AufgCount+1; i++) {
                     found = false;
                     while (!found) {
                        /*random[1] = (int) (Math.random() * 98 + 1);
@@ -61,13 +59,19 @@ public class Main {
 
                             if ((MathUtil.Count(p) + MathUtil.Count(q)) <= 10) {
                                 found = true;
+                                Aufgaben[i] = (a + "/" + b);
+                                Loesungen[i] = (p + "/" + q);
                             }
                         }
 
 
                     }
+                    System.out.println("Aufgabe " + i + " = " + Aufgaben[i]);
+                    System.out.println("Lösungen Aufgabe " + i + " = " + Loesungen[i]);
                 }
 
+
+            return;
             }
 //endregion
 
@@ -75,7 +79,8 @@ public class Main {
             case 2: {
                 boolean found;
                 System.out.println("Bitte Anzahl der Aufgaben eingeben");
-                for (int i = 1; i == s.nextInt(); i++) {
+                int AufgCount = s.nextInt();
+                for (int i = 1; i == AufgCount; i++) {
                     found = false;
                     while (!found) {
 
@@ -110,13 +115,18 @@ public class Main {
 
                             if ((MathUtil.Count(p) + MathUtil.Count(q)) == 5 && ( (p+q) > 10) && (p+q <= 20)) {
                                 found = true;
+                                Aufgaben[i] = (a + "/" + b);
+                                Loesungen[i] = (p + "/" + q);
                             }
                         }
 
 
                     }
+                    System.out.println("Aufgabe " + i + " = " + Aufgaben[i]);
+                    System.out.println("Lösungen Aufgabe " + i + " = " + Loesungen[i]);
                 }
 
+                return;
             }
 //endregion
 
@@ -124,7 +134,8 @@ public class Main {
             case 3: {
                 boolean found;
                 System.out.println("Bitte Anzahl der Aufgaben eingeben");
-                for (int i = 1; i == s.nextInt(); i++) {
+                int AufgCount = s.nextInt();
+                for (int i = 1; i == AufgCount; i++) {
                     found = false;
                     while (!found) {
 
@@ -159,13 +170,18 @@ public class Main {
 
                             if ((MathUtil.Count(p) + MathUtil.Count(q)) == 5 && ( (p+q) > 20) && (p+q <= 30)) {
                                 found = true;
+                                Aufgaben[i] = (a + "/" + b);
+                                Loesungen[i] = (p + "/" + q);
                             }
                         }
 
 
                     }
+                    System.out.println("Aufgabe " + i + " = " + Aufgaben[i]);
+                    System.out.println("Lösungen Aufgabe " + i + " = " + Loesungen[i]);
                 }
 
+                return;
             }
 //endregion
         }
