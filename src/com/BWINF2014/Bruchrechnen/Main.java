@@ -137,6 +137,7 @@ public class Main {
                 int AufgCount = s.nextInt();
                 for (int i = 1; i == AufgCount; i++) {
                     found = false;
+                    //<editor-fold desc="While !found">
                     while (!found) {
 
                         a = (int) MathUtil.Random(99, false);
@@ -177,6 +178,7 @@ public class Main {
 
 
                     }
+                    // </editor-fold>
                     System.out.println("Aufgabe " + i + " = " + Aufgaben[i]);
                     System.out.println("Lösungen Aufgabe " + i + " = " + Loesungen[i]);
                 }
