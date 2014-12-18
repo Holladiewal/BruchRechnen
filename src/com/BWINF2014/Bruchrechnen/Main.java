@@ -71,7 +71,7 @@ public class Main {
                 }
 
 
-            return;
+            break;
             }
 //endregion
 
@@ -126,7 +126,7 @@ public class Main {
                     System.out.println("Lösungen Aufgabe " + i + " = " + Loesungen[i]);
                 }
 
-                return;
+                break;
             }
 //endregion
 
@@ -181,7 +181,7 @@ public class Main {
                     System.out.println("Lösungen Aufgabe " + i + " = " + Loesungen[i]);
                 }
 
-                return;
+                break;
             }
 //endregion
         }
