@@ -19,7 +19,9 @@ public class Main {
         Scanner s = new Scanner(System.in);
         System.out.println("Leicht(1), Mittel(2) oder Schwer(3)?");
         switch (s.nextInt()) {
-            //TODO Add Mittel und Schwer
+            /*TODO Add Mittel und Schwer*/
+
+            //region Leicht
             case 1: {
                 boolean found;
                 System.out.println("Bitte Anzahl der Aufgaben eingeben");
@@ -67,6 +69,7 @@ public class Main {
                 }
 
             }
+//endregion
         }
     }
 
