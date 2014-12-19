@@ -24,7 +24,7 @@ public class Main {
                     boolean found;
                     System.out.println("Bitte Anzahl der Aufgaben eingeben");
                     int AufgCount = s.nextInt();
-                    for (int i = 1; i == AufgCount+1; i++) {
+                    for (int i = 1; i <= AufgCount; i++) {
                         found = false;
                         while (!found) {
                            /*random[1] = (int) (Math.random() * 98 + 1);
@@ -42,10 +42,10 @@ public class Main {
                                 //Unused int pCount;
 
 
-                                if ((MathUtil.Count(a) + MathUtil.Count(b)) == 4 && (p+q) <= 10) {
+                                if ((MathUtil.Count(a) + MathUtil.Count(b)) == 4 && (p+q <= 10) && ((double) (p / q) == (double) (a/b)) && a != b) {
                                     found = true;
                                     Aufgaben[i] = (a + "/" + b);
-                                    Loesungen[i] = (MathUtil.round(p,5) + "/" + MathUtil.round(q,5));
+                                    Loesungen[i] = (MathUtil.round(p, 5) + "/" + MathUtil.round(q,5));
 
 
                                 }
@@ -58,7 +58,7 @@ public class Main {
                                 p = (double) a / bTmp;
                                 q = (double) b / bTmp;
 
-                                if (((MathUtil.Count(a) + MathUtil.Count(b)) == 5) && ((p + q) <= 10)) {
+                                if ((MathUtil.Count(a) + MathUtil.Count(b)) == 4 && (p+q <= 10) && ((double) (p / q) == (double) (a/b)) && a != b) {
                                     found = true;
                                     Aufgaben[i] = (a + "/" + b);
                                     Loesungen[i] = (MathUtil.round(p,5) + "/" + MathUtil.round(q,5));
@@ -81,11 +81,11 @@ public class Main {
                     boolean found;
                     System.out.println("Bitte Anzahl der Aufgaben eingeben");
                     int AufgCount = s.nextInt();
-                    for (int i = 1; i == AufgCount; i++) {
+                    for (int i = 1; i <= AufgCount; i++) {
                         found = false;
                         while (!found) {
 
-                            a = (int) MathUtil.Random(99, false);
+                            a = (int) MathUtil.Random(999, false);
                             b = (int) MathUtil.Random(99, false);
 
                             if (a < b) {
@@ -97,7 +97,7 @@ public class Main {
                                 p = (double) a / aTmp;
                                 q = (double) b / aTmp;
 
-                                if ((MathUtil.Count(a) + MathUtil.Count(b)) == 5 && ( (p+q) > 10) && (p+q <= 20)) {
+                                if ((MathUtil.Count(a) + MathUtil.Count(b)) == 5 && ( (p+q) > 10) && (p+q <= 20) && ((double) (p / q) == (double) (a/b)) && a != b) {
                                     found = true;
                                     Aufgaben[i] = (a + "/" + b);
                                     Loesungen[i] = (MathUtil.round(p,5) + "/" + MathUtil.round(q,5));
@@ -114,7 +114,7 @@ public class Main {
                                 p = (double) a / bTmp;
                                 q = (double) b / bTmp;
 
-                                if ((MathUtil.Count(a) + MathUtil.Count(b)) == 5 && ( (p+q) > 10) && (p+q <= 20)) {
+                                if ((MathUtil.Count(a) + MathUtil.Count(b)) == 5 && ( (p+q) > 10) && (p+q <= 20) && ((double) (p / q) == (double) (a/b)) && a != b) {
                                     found = true;
                                     Aufgaben[i] = (a + "/" + b);
                                     Loesungen[i] = (MathUtil.round(p,5) + "/" + MathUtil.round(q,5));
@@ -153,7 +153,7 @@ public class Main {
                                 p = (double) a / aTmp;
                                 q = (double) b / aTmp;
 
-                                if ((MathUtil.Count(a) + MathUtil.Count(b)) == 5 && ( (p+q) > 20) && (p+q <= 30) && ((double) (p / q) == (double) (a/b))) {
+                                if ((MathUtil.Count(a) + MathUtil.Count(b)) == 5 && ( (p+q) > 20) && (p+q <= 30) && ((double) (p / q) == (double) (a/b)) && a != b) {
                                     found = true;
                                     Aufgaben[i] = (a + "/" + b);
                                     Loesungen[i] = (MathUtil.round(p,5) + "/" + MathUtil.round(q,5));
@@ -190,10 +190,10 @@ public class Main {
             }
         } catch (Exception e) {
             System.out.println("Schwerwiegender Fehler:\n" + e.toString());
-            //System.out.println(e.getMessage().toString());
+
             e.printStackTrace();
 
-            //e.printStackTrace();
+           
         }
 
     }

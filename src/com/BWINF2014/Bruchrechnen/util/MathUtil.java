@@ -15,6 +15,7 @@ public class MathUtil {
         if (Math.abs(b) < 10000000) return 7;
         if (Math.abs(b) < 100000000) return 8;
         if (Math.abs(b) < 1000000000) return 9;
+        if (Math.abs(b) < 10000000000f) return 10;
         return -1;
     }
     public static double round(double Zahl, int Stellen) {
@@ -22,7 +23,7 @@ public class MathUtil {
         return (Math.round(Zahl * pow10)/pow10);
     }
     public static double Random(int a, boolean Zero){
-        if (Zero == true) {
+        if (Zero) {
             return Math.random()*a;
         }
         else {
