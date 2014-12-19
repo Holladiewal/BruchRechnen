@@ -4,17 +4,17 @@ import java.lang.Math;
 
 
 public class MathUtil {
-    public static int Count(int Zahl) {
-        int b;
-        if (Math.abs(Zahl) < 10) return 1;
-        if (Math.abs(Zahl) < 100) return 2;
-        if (Math.abs(Zahl) < 1000) return 3;
-        if (Math.abs(Zahl) < 10000) return 4;
-        if (Math.abs(Zahl) < 100000) return 5;
-        if (Math.abs(Zahl) < 1000000) return 6;
-        if (Math.abs(Zahl) < 10000000) return 7;
-        if (Math.abs(Zahl) < 100000000) return 8;
-        if (Math.abs(Zahl) < 1000000000) return 9;
+    public static int Count(double Zahl) {
+        int b = (int) Zahl;
+        if (Math.abs(b) < 10) return 1;
+        if (Math.abs(b) < 100) return 2;
+        if (Math.abs(b) < 1000) return 3;
+        if (Math.abs(b) < 10000) return 4;
+        if (Math.abs(b) < 100000) return 5;
+        if (Math.abs(b) < 1000000) return 6;
+        if (Math.abs(b) < 10000000) return 7;
+        if (Math.abs(b) < 100000000) return 8;
+        if (Math.abs(b) < 1000000000) return 9;
         return -1;
     }
     public static double round(double Zahl, int Stellen) {

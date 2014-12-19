@@ -8,8 +8,8 @@ public class Main {
     public static void main(String[] args) {
         int a; //a div b
         int b;
-        int p;//p div q
-        int q;
+        double p;//p div q
+        double q;
         String[] Aufgaben = new String[256];
         String[] Loesungen = new String[256];
 
@@ -35,8 +35,8 @@ public class Main {
                             while (!(b % aTmp == 0)) {
                                 aTmp--;
                             }
-                            p = a / aTmp;
-                            q = b / aTmp;
+                            p = (double) a / aTmp;
+                            q = (double) b / aTmp;
 
                             //Unused int pCount;
 
@@ -54,8 +54,8 @@ public class Main {
                             while (!(a % bTmp == 0)) {
                                 bTmp--;
                             }
-                            p = a / bTmp;
-                            q = b / bTmp;
+                            p = (double) a / bTmp;
+                            q = (double) b / bTmp;
 
                             if ((MathUtil.Count(p) + MathUtil.Count(q)) <= 10) {
                                 found = true;
@@ -93,8 +93,8 @@ public class Main {
                                 aTmp--;
                             }
 
-                            p = a / aTmp;
-                            q = b / aTmp;
+                            p = (double) a / aTmp;
+                            q = (double) b / aTmp;
 
                             if ((MathUtil.Count(p) + MathUtil.Count(q)) == 5 && ( (p+q) > 10) && (p+q <= 20)) {
                                 found = true;
@@ -110,8 +110,8 @@ public class Main {
                                 bTmp--;
                             }
 
-                            p = a / bTmp;
-                            q = b / bTmp;
+                            p = (double) a / bTmp;
+                            q = (double) b / bTmp;
 
                             if ((MathUtil.Count(p) + MathUtil.Count(q)) == 5 && ( (p+q) > 10) && (p+q <= 20)) {
                                 found = true;
@@ -135,24 +135,24 @@ public class Main {
                 boolean found;
                 System.out.println("Bitte Anzahl der Aufgaben eingeben");
                 int AufgCount = s.nextInt();
-                for (int i = 1; i == AufgCount; i++) {
+                for (int i = 1; i <= AufgCount; i++) {
                     found = false;
-                    //<editor-fold desc="While !found">
+
                     while (!found) {
 
-                        a = (int) MathUtil.Random(99, false);
+                        a = (int) MathUtil.Random(999, false);
                         b = (int) MathUtil.Random(99, false);
 
                         if (a < b) {
                             int aTmp = a;
-                            while (!(b % aTmp == 0)) {
+                            while (!(b % aTmp == 0 && aTmp != 1)) {
                                 aTmp--;
                             }
 
-                            p = a / aTmp;
-                            q = b / aTmp;
+                            p = (double) a / aTmp;
+                            q = (double) b / aTmp;
 
-                            if ((MathUtil.Count(p) + MathUtil.Count(q)) == 5 && ( (p+q) > 20) && (p+q <= 30)) {
+                            if ((MathUtil.Count(a) + MathUtil.Count(b)) == 5 && ( (p+q) > 20) && (p+q <= 30)) {
                                 found = true;
                                 Aufgaben[i] = (a + "/" + b);
                                 Loesungen[i] = (p + "/" + q);
@@ -162,12 +162,12 @@ public class Main {
 
                         } else {
                             int bTmp = b;
-                            while (!(a % bTmp == 0)) {
+                            while (!(a % bTmp == 0 && bTmp != 1)) {
                                 bTmp--;
                             }
 
-                            p = a / bTmp;
-                            q = b / bTmp;
+                            p = (double) a / bTmp;
+                            q = (double) b / bTmp;
 
                             if ((MathUtil.Count(p) + MathUtil.Count(q)) == 5 && ( (p+q) > 20) && (p+q <= 30)) {
                                 found = true;
@@ -178,12 +178,12 @@ public class Main {
 
 
                     }
-                    // </editor-fold>
+
                     System.out.println("Aufgabe " + i + " = " + Aufgaben[i]);
                     System.out.println("Lösungen Aufgabe " + i + " = " + Loesungen[i]);
                 }
 
-                break;
+                //break;
             }
 //endregion
         }
